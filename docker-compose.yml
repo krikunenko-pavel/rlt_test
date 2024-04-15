@@ -1,0 +1,19 @@
+version: "3.9"
+
+
+
+services:
+  mongo:
+    image: mongo:latest
+    volumes:
+#      - ./dump:/dumps
+      - ./mongo_data:/data
+
+  bot:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    env_file:
+      - ./test_env
+    volumes:
+      - .:/app

@@ -1,0 +1,5 @@
+.idea
+dump
+.venv
+mongo_data
+test_env
